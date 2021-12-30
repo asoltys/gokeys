@@ -30,7 +30,7 @@ func main() {
 	blindPubkey := blindPrivkey.PubKey()
 
 	pk, _ := btcec.ParsePubKey(pubkey.Key, btcec.S256())
-	p2wpkh := payment.FromPublicKey(pk, &network.Regtest, blindPubkey)
-	address, _ := p2wpkh.WitnessPubKeyHash()
+	p2wpkh := payment.FromPublicKey(pk, &network.Liquid, blindPubkey)
+	address, _ := p2wpkh.ConfidentialPubKeyHash()
 	fmt.Println(address)
 }
