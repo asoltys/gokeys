@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/btcsuite/btcd v0.22.0-beta
+	github.com/pebbe/zmq4 v1.2.7
 	github.com/tyler-smith/go-bip32 v1.0.0
 	github.com/vulpemventures/go-elements v0.3.6
 )
