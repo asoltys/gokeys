@@ -32,6 +32,6 @@ func main() {
 
 	pk, _ := btcec.ParsePubKey(pubkey.Key, btcec.S256())
 	p2wpkh := payment.FromPublicKey(pk, &network.Regtest, blindPubkey)
-	address, _ := p2wpkh.PubKeyHash()
+	address, _ := p2wpkh.WitnessPubKeyHash()
 	fmt.Println(address)
 }
